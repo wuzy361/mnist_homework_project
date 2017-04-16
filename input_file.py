@@ -50,39 +50,3 @@ def getLabel(name):
 	return label
 
 
-# draw_by_pixel(getData("test")[0])
-# print getLabel("test")[0]
-
-# draw_by_pixel(getData("test")[102])
-# print getLabel("test")[102]
-
-# draw_by_pixel(getData("test")[103])
-# print getLabel("test")[103]
-'''
-binfile = open(filelist[1] , 'rb')
-buf = binfile.read()
-#index是偏移量，表示读文件的起始位置，‘>’表示大端存储，‘I’表示32位整数。这里以大端模式读取四个整数，所以有四个返回值（其实是返回一个包含四个整数的list）。
-index = 0
-magic, numImages , numRows , numColumns = struct.unpack_from('>IIII' , buf , index)
-index += struct.calcsize('>IIII')
-#一下读入784个unsigned byte
-train_data = []
-while index < 784*6000+32*4:
-	im = struct.unpack_from('>784B' ,buf, index)
-	index += struct.calcsize('>784B')
-	train_data.append(im)
-train_data = np.array(train_data)
-
-
-'''
-
-#把tuple类型的im转化成numpy.array，之后把784*1的变成28*28
-# im_row = np.array(train_data[1])
-# im = im_row.reshape(28,28)
-
-#train_data = train_data.reshape(6000,784)
-
-
-# fig = plt.figure()
-# plt.imshow(im , cmap='gray')
-# plt.show()
