@@ -44,7 +44,7 @@ pca_test_data = pca.transform(test_data)
 
 
 t0 = time.time()
-svc_clf = SVC()
+svc_clf = SVC(kernel='rbf', class_weight='balanced')
 #svc_clf.fit(train_data[:len(train_data)//50],train_lables[:len(train_data)//50])
 svc_clf.fit(pca_train_data,train_lables)
 svc_pred = svc_clf.predict(pca_test_data)
