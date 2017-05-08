@@ -17,3 +17,8 @@
 ```
 python main.py
 ```
+
+### Update1   2017-5-8
+http://www.jianshu.com/writer#/notebooks/12137471/notes/12148083/preview
+
+初步探索了下机器学习算法在minst上的性能
