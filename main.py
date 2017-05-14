@@ -14,11 +14,11 @@ def just_test(s, n1, n2):
     data = getData(s)
     label = getLabel(s)
     for x in range(n1, n2):
-        print label[x]
+        print (label[x])
         draw_by_pixel(data[x])
 
 
-print "train group:"
+print ("train group:")
 just_test('train', 5, 10)
-print "test group:"
+print ("test group:")
 just_test('test', 105, 110)

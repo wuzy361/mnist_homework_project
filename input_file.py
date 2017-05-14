@@ -1,10 +1,10 @@
 # coding:utf-8
 import numpy as np
 import struct
-file_train_data = 'data_set/train-images.idx3-ubyte'
-file_train_label = 'data_set/train-labels.idx1-ubyte'
-file_test_data = 'data_set/t10k-images.idx3-ubyte'
-file_test_label = 'data_set/t10k-labels.idx1-ubyte'
+file_train_data = 'data/train-images.idx3-ubyte'
+file_train_label = 'data/train-labels.idx1-ubyte'
+file_test_data = 'data/t10k-images.idx3-ubyte'
+file_test_label = 'data/t10k-labels.idx1-ubyte'
 
 filelist = [file_train_data, file_train_label, file_test_data, file_test_label]
 
