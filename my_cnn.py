@@ -9,7 +9,7 @@ import pdb
 INPUT_SIZE = 28*28
 CLASS_NUM = 10
 BATCH_SIZE = 100
-EPOCH = 10
+EPOCH = 20
 
 train_x = torch.from_numpy(getData("train")/255.)
 train_y = torch.from_numpy(getLabel("train"))
