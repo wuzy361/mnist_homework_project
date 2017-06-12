@@ -60,14 +60,15 @@ class CNN(nn.Module):
 
 
 cnn = CNN()
+cnn.cuda()
 optimizer = torch.optim.Adam(cnn.parameters(),)
 loss_func = nn.CrossEntropyLoss()
 
 for epoch in range(EPOCH):
     for setp,(x,y) in enumerate(train_loader):
         x = torch.Tensor.float(x)
-        b_x = Variable(x.view(BATCH_SIZE,1,28,28))
-        b_y = Variable(y.view(100))
+        b_x = Variable(x.view(BATCH_SIZE,1,28,28)).cuda()
+        b_y = Variable(y.view(100)).cuda()
        # print(b_x,b_y)
         output = cnn(b_x)
         loss = loss_func(output,b_y)
@@ -84,7 +85,7 @@ correct = 0
 total = 0
 for images, labels in test_loader:
     images = torch.Tensor.float(images)
-    images = Variable(images.view(BATCH_SIZE,1,28,28))
+    images = Variable(images.view(BATCH_SIZE,1,28,28)).cuda()
     outputs = cnn(images)
     _, predicted = torch.max(outputs.data, 1)
     total += labels.size(0)
