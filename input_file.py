@@ -1,4 +1,5 @@
 # coding:utf-8
+#aabb
 import numpy as np
 import struct
 file_train_data = 'data/train-images.idx3-ubyte'
